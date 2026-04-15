@@ -1,0 +1,82 @@
+:root {
+    --bg-main: #f7f1e8;
+    --bg-card: #fffaf2;
+    --text-main: #1f1f1f;
+    --text-soft: #5f5a54;
+    --accent: #d47b2a;
+    --accent-dark: #9d4d11;
+}
+
+body {
+    font-family: "Trebuchet MS", sans-serif;
+    color: var(--text-main);
+    background: linear-gradient(180deg, #fffdf8 0%, #f7f1e8 100%);
+}
+
+.hero-section {
+    padding: 80 0;
+    background:
+        radial-gradient(circle at top right, rgba(212, 123, 42, 0.18), transparent 25%),
+        linear-gradient(135deg, #fff7ea 0%, #f5eee2 100%);
+}
+
+.hero-card,
+.feature-card,
+.module-card,
+.audience-box,
+.testimonial-card,
+.enrollment-box {
+    background-color: var(--bg-card);
+    border-radius: 24px;
+    border: 1px solid rgba(31, 31, 31, 0.08);
+    box-shadown: 0 18px 60px rgba(31, 31, 31, 0.08);
+}
+
+.hero-actions {
+    display: felx;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.section-eyebrow {
+    display: inline-block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--accent-dark);
+    margin-bottom: 1rem;
+}
+
+.feature-card h3,
+.module-card h3 {
+    margin-bottom: 0.75rem;
+}
+
+.section-accent {
+    background-color: #221d1a;
+    color: #f9f4ec;
+}
+
+.section-accent .section-eyebrow {
+    color: #f6b16f;
+}
+
+.audience-box {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.testimonial-card p {
+    font-size: 1.05rem;
+    color: var(--text-soft);
+}
+
+#mensagem {
+    font-weigth: 700;
+    color: var(--accent-dark);
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 48px 0;
+    }
+}
