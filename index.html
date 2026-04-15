@@ -2,236 +2,282 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formação em Desenvolvimento de Testes</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>Summit Front-End 2026 - Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#inicio">DevTest Academy</a>
-            <button class="navbar-toggler" type="button" data-bs-togle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir navegação">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <header class="site-header border-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#topo">Summit Front-End</a>
+                <button class="navbar-toggler" type="button" data-bs-togle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="menu-principal">
-                <ul class="navbar-nav ms-auto gap-lg-3">
-                    <li class="nav-item"><a class="nav-link" href="#beneficios">Benefícios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#conteudo">Conteúdo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#publico">Público</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#depoimentos">Depoimentos</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-dark text-white px-3" href="#inscricao">Inscreva-se</a></li>
-                </ul>
+                <div class="collapse navbar-collapse" id="menu-principal">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                        <li class="nav-item"><a href="#agenda" class="nav-link">Agenda</a></li>
+                        <li class="nav-item"><a href="#palestrantes" class="nav-link">Palestrantes</a></li>
+                        <li class="nav-item"><a href="#ingressos" class="nav-link">Ingressos</a></li>
+                        <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
+                        <li class="nav-item"><a href="#contato" class="btn btn-dark">Quero participar</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <section id="inicio" class="hero-section py-5">
-        <div class="container py-lg-5">
-            <div class="row align-items-center g-4">
-                <div class="col-lg-7">
-                    <span class="badge rounded-pill text-bg-warning mb-3">Turma prática com foco em mercado</span>
-                    <h1 class="display-4 fw-bold mb-3">Aprenda Desenvolvimento de Testes com projetos reais</h1>
-                    <p class="lead mb-4">Uma formação intensiva para quem quer dominar testes unitários, integração, automação e qualidade de software com JavaScript.</p>
-                    <div class="hero-actions">
-                        <a class="btn btn-dark btn-lg" href="#inscricao">Garantir vaga</a>
-                        <a class="btn btn-outline-dark btn-lg" href="#conteudo">Ver programa</a>
+    <main id="topo">
+        <section id="inicio" class="hero-section py-5">
+            <div class="container py-4 py-lg-5">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7">
+                        <span class="badge text-bg-warning rounded-pill mb-3">Evento presencial e online</span>
+                        <h1 class="display-4 fw-bold mb-3">Construa interfaces de alto impacto com HTML5, CSS3 e JavaScript</h1>
+                        <h1 class="h5 text-secondary mb-4">3 dias de talks, workshops e desafios para elevar seu nível</h1>
+                        <p class="lead mb-4">Participe do maior encontro para quem cria produtos digitais no Brasil. Conteúdo técnico com foco em experiência do usuário, performance e acessibilidade.</p>
+                        <div class="hero-actions d-flex gap-3 flex-wrap">
+                            <a href="#ingresso" class="btn btn-dark btn-lg">Ver lotes</a>
+                            <a href="#agenda" class="btn btn-outline-dark btn-lg">Explorar trilhas</a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="col-lg-5">
-                    <div class="hero-card p-4 shadow-sm">
-                        <p class="text-uppercase small fw-semibold mb-2">Próxima turma</p>
-                        <ul class="list-unstyled mb-0">
-                            <li class="mb-3"><strong>Duração:</strong> 8 semanas</li>
-                            <li class="mb-3"><strong>Formato:</strong> aulas ao vivo e desafios práticos</li>
-                            <li class="mb-3"><strong>Projetos:</strong> testes com Jest, Cypress e API</li>
-                            <li><strong>Certificado:</strong> emitido ao final da formação</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="beneficioss" class="py-5 bg-light">
-        <div class="container">
-            <div class="text-center mb-5">
-                <span class="section-eyebrow">Por que fazer</span>
-                <h2 class="display-6 fw-bold">O que você desenvolve durante o curso</h2>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-md4">
-                    <article class="feature-card h-100 p-4">
-                        <h3 class="h4">Mentalidade de qualidade</h3>
-                        <p class="mb-0">Aprenda a identificar cenários críticos e transformar requisitos em cobertura de testes consistente.</p>
-                    </article>
-                </div>
-                <div class="col-md-4">
-                    <article class="feature-card h-100 p-4">
-                        <h3 class="h4">Automação na prática</h3>
-                        <p class="mb-0">Monte pipelines de validação e automatize fluxos de front-end, back-end e integrações.</p>
-                    </article>
-                </div>
-                <div class="col-md-4">
-                    <article class="feature-card h-100 p-4">
-                        <h3 class="h4">Portfólio técnico</h3>
-                        <p class="mb-0">Saia com exercícios aplicados, documentação de bugs e um projeto final publicável.</p>
-                    </article>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="conteudo" class="py-5">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-5">
-                    <span class="section-eyebrow">Conteúdo</span>
-                    <h2 class="display-6 fw-bold mb-3">Seis módulos para construir confiança técnica</h2>
-                    <p class="mb-0">O programa foi desenhado para sair da teoria e chegar em implementação, análise e automação de cenários reais.</p>
-                </div>
-
-                <div class="col-lg-7">
-                    <div class="row g-3">
-                        <div class="col-sm-6">
-                            <div class="module-card p-4 h-100">
-                                <h3 class="h5">1. Fundamentos</h3>
-                                <p class="mb-0">Pirâmide de testes, tipos, estratégia e critérios de qualidade.</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="module-card p-4 h-100">
-                                <h3 class="h5">2. Testes unitários</h3>
-                                <p class="mb-0">Cobertura de funções, mocks, stubs e isolamento de dependências.</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="module-card p-4 h-100">
-                                <h3 class="h5">3. Testes de API</h3>
-                                <p class="mb-0">Contratos, autenticação, cenários de erro e validações automatizadas.</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="module-card p-4 h-100">
-                                <h3 class="h5">4. Testes end-to-end</h3>
-                                <p class="mb-0">Navegação, formulários, fluxo do usuário e estabilidade dos testes.</p>
-                            </div>
-                        </div>
+                    <div class="col-lg-5">
+                        <aside class="hero-card p-4 shadow-sm">
+                            <p class="text-uppercase fw-semibold small mb-2">Próxima edição</p>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><strong>Data:</strong> 20 a 22 de julho de 2026</li>
+                                <li class="mb-2"><strong>Local:</strong> Centro de Convenções Recife</li>
+                                <li class="mb-2"><strong>Formato:</strong> presencial + transmissão</li>
+                                <li><strong>Público:</strong> iniciantes e profissionais</li>
+                            </ul>
+                        </aside>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="public" class="py-5 section-accent">
-        <div class="container">
-            <div class="row g-4 align-items-center">
-                <div class="col-lg-6">
-                    <span class="section-eyebrow">Para quem</span>
-                    <h2 class="display-6 fw-bold mb-3">Ideal para devs, QAs e estudantes em transição</h2>
-                    <p class="mb-0">Se você quer reduzir bugs em produção, melhorar a confiabilidade do software e ganhar repertório técnico em testes, esta formação foi feita para você.</p>
+        <section id="agenda" class="py-5 section-muted">
+            <div class="container">
+                <div class="section-header text-center mb-5">
+                    <p class="section-kicker">Programação principal</p>
+                    <h2 class="display-6 fw-bold">Trilhas para produto, engenharia e design</h2>
                 </div>
-                <div class="col-lg-6">
-                    <div class="audience-box p-4">
-                        <div class="d-flex justify-content-between border-bottom pb-3 mb-3">
-                            <span>Desenvolvedores júnior</span>
-                            <strong>Alta aderência</strong>
-                        </div>
-                        <div class="d-flex justify-content-between border-bottom pb-3 mb-3">
-                            <span>QAs iniciantes</span>
-                            <strong>Alta aderência</strong>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <span>Tech leads e analistas</span>
-                            <strong>Média aderência</strong>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <article class="session-card h-100 p-4">
+                            <h3 class="h4">Dia 1 - Fundamentos modernos</h3>
+                            <p>Semântica, acessibilidade real, arquitetura de CSS e estrutura escalável para aplicações.</p>
+                            <button class="btn btn-sm btn-outline-dark" data-track="agenda" data-session-id="1">Salvar sessão</button>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="session-card h-100 p-4">
+                            <h3 class="h4">Dia 2 - Frameworks e ecossistema</h3>
+                            <p>Como aplicar padrões com Bootstrap sem sacrificar usabilidade e identidade visual.</p>
+                            <button class="btn btn-sm btn-outline-dark" data-track="agenda" data-session-id="2">Salvar sessão</button>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="session-card h-100 p-4">
+                            <h3 class="h4">Dia 3 - Performance na prática</h3>
+                            <p>Métricas, otimização de assets, carregamento progressivo e JavaScript orientado a UX.</p>
+                            <button class="btn btn-sm btn-outline-dark" data-track="agenda" data-session-id="3">Salvar sessão</button>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="palestrante" class="py-5">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-5">
+                        <p class="section-kicker">Especialistas confirmados</p>
+                        <h2 class="display-6 fw-bold mb-3">Pessoas que estão moldando produtos digitais</h2>
+                        <p class="mb-0">Conheça profissionais de empresas nacionais e internacionais compartilhando desafios reais de desenvolvimento front-end.</p>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div class="speaker-card p-3 h-100">
+                                    <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=800&q=60" class="img-fluid rounded mb-3">
+                                    <h3 class="h5 mb-1">Camila Torres</h3>
+                                    <p class="small text-muted mb-0">Staff Engineer - Nubank</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="speaker-card p-3 h-100">
+                                    <img src="https://images.unsplash.com/photo-1542204625-de293a2f34ea?auto=format&fit=crop&w=800&q=60" class="img-fluid rounded mb-3" alt="Foto de Eduardo Silva">
+                                    <h3 class="h5 mb-1">Eduardo Silva</h3>
+                                    <p class="small text-muted mb-0">Senior Front-End - Mercado Livre</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="speaker-card p-3 h-100">
+                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=60" class="img-fluid rounded mb-3" alt="Foto de Jéssica Alves">
+                                    <h3 class="h5 mb-1">Jéssica Alves</h3>
+                                    <p class="small text-muted mb-0">Design Systems Lead - iFood</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="speaker-card p-3 h-100">
+                                    <img src="https://images.unsplash.com/photo-1541534401786-2077eed87a72?auto=format&fit=crop&w=800&q=60" class="img-fluid rounded mb-3" alt="Foto de Diego Martins">
+                                    <h3 class="h5 mb-1">Diego Martins</h3>
+                                    <p class="small text-muted mb-0">Principal Engineer - VTEX</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="depoimentos" class="py-5 bg-light">
-        <div class="container">
-            <div class="text-center mb-5">
-                <span class="section-eyebrow">Resultados</span>
-                <h2 class="display-6 fw-bold">Quem passou pela formação recomenda</h2>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-lg-4">
-                    <blockquote class="testimonial-card p-4 h-100">
-                        <p>"Hoje eu consigo estruturar testes com critério e defender melhor minhas decisões técnicas no time."</p>
-                        <footer class="mt-3"><strong>Marina</strong>, Front-end Developer</footer>
-                    </blockquote>
+        <section id="ingressos" class="py-5 section-accent text-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <p class="section-kicker text-warning">Lotes limitados</p>
+                    <h2 class="display-6 fw-bold">Escolha seu ingresso</h2>
                 </div>
-                <div class="col-lg-4">
-                    <blockquote class="testimonial-card p-4 h-100">
-                        <p>"O curso conectou teoria e prática de um jeito que eu ainda não tinha encontrado."</p>
-                        <footer class="mt-3"><strong>Lucas</strong>, QA Analyst</footer>
-                    </blockquote>
-                </div>
-                <div class="col-lg-4">
-                    <blockquote class="testimonial-card p-4 h-100">
-                        <p>"Consegui aplicar automação no projeto da empresa já na segunda semana de aula."</p>
-                        <footer class="mt-3"><strong>Renata</strong>, Software Engineer</footer>
-                    </blockquote>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="inscricao" class="py-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="enrollment-box p-4 p-lg-5">
-                        <div class="text-center mb-4">
-                            <span class="section-eyebrow">Inscrição</span>
-                            <h2 class="display-6 fw-bold">Entre na próxima turma</h2>
-                            <p class="mb-0">Preencha o formulário e receba as informações da formação.</p>
-                        </div>
-
-                        <form id="form-inscricao" class="row g-3">
-                            <div class="col-md-6">
-                                <label for="nome" class="form-label">Nome</label>
-                                <input type="text" class="form-control" id="nome" placeholder="Seu nome completo">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="email" class="form-label">E-mail</label>
-                                <input type="email" class="form-control" id="email" placeholder="voce@exemplo.com">
-                            </div>
-                            <div class="col-12">
-                                <label for="nivel" class="form-label">Nível atual</label>
-                                <select id="nivel" class="form-select">
-                                    <option selected>Selecione uma opção</option>
-                                    <option>Estudante</option>
-                                    <option>Júnior</option>
-                                    <option>Pleno</option>
-                                </select>
-                            </div>
-                            <div class="col-12 d-grid">
-                                <button class="btn btn-dark btn-lg" type="submit">Quero receber detalhes</button>
-                            </div>
-                        </form>
-
-                        <p id="mensagem" class="text-center mt-4 mb-0"></p>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4 col-md-6">
+                        <article class="ticket-card p-4 h-100">
+                            <h3 class="h4">Starter</h3>
+                            <p class="ticket-price">R$ 199</p>
+                            <ul>
+                                <li>Acesso a todas as palestras</li>
+                                <li>Comunidade no Discord</li>
+                                <li>Certificado digital</li>
+                            </ul>
+                            <a class="btn btn-outline-light w-100" href="#contato">Selecionar plano</a>
+                        </article>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <article class="ticket-card p-4 h-100 highlight">
+                            <h3 class="h4">Pro</h3>
+                            <p class="ticket-price">R$ 349</p>
+                            <ul>
+                                <li>Tudo do Starter</li>
+                                <li>2 workshops práticos</li>
+                                <li>Mentoria em grupo</li>
+                            </ul>
+                            <a class="btn btn-warning w-100" href="#contato">Selecionar plano</a>
+                        </article>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section id="faq" class="py-5">
+            <div class="container">
+                <div class="row g-4 align-items-start">
+                    <div class="col-lg-4">
+                        <h2 class="display-6 fw-bold">Dúvidas frequentes</h2>
+                        <p class="text-muted">As respostas abaixo ajudam a planejar sua participação no evento.</p>
+                    </div>
+
+                    <div class="col-lg-8">
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="q1">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="true" aria-controls="a1">
+                                        O evento é para iniciantes?
+                                    </button>
+                                </h3>
+                                <div id="a1" class="accordion-collapse collapse show" aria-labelledby="q1" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">Sim, teremos trilhas básicas e avançadas para diferentes níveis.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="q2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">
+                                        Vou receber gravações?
+                                    </button>
+                                </h3>
+                                <div id="a2" class="accordion-collapse collapse" aria-labelledby="q2" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">Quem adquirir ingresso Pro terá acesso às gravações por 6 meses.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="py-5 section-muted">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="contact-box p-4 p-lg-5">
+                            <div class="text-center mb-4">
+                                <p class="section-kicker">Inscrição</p>
+                                <h2 class="display-6 fw-bold">Reserve seu lugar</h2>
+                                <p class="mb-0">Preencha os dados para entrar na lista de confirmação.</p>
+                            </div>
+
+                            <form id="form-inscricao" class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="nomeCompleto" class="form-label">Nome completo</label>
+                                    <input id="nome" class="form-control" type="text" placeholder="Digite seu nome">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input id="email" class="form-control" type="mail" placeholder="voce@empresa.com">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="cargo" class="form-label">Seu momento de carreira</label>
+                                    <select id="momento-carreira" class="form-select">
+                                        <option selected>Selecione</option>
+                                        <option value="junior">Júnior</option>
+                                        <option value="pleno">Pleno</option>
+                                        <option value="senior">Sênior</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label" for="ingresso">Tipo de ingresso</label>
+                                    <select id="ingresso" class="form-select">
+                                        <option selected>Escolha o ingresso</option>
+                                        <option value="starter">Starter</option>
+                                        <option value="pro">Pro</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="termos" class="form-check-label">
+                                        <input type="checkbox" id="terms" class="form-check-input">
+                                        Eu concordo com os termos de uso e política de privacidade
+                                    </label>
+                                </div>
+
+                                <div class="col-12 d-grid">
+                                    <button type="button" id="btn-enviar" class="btn btn-dark btn-lg">Enviar inscrição</button>
+                                </div>
+                            </form>
+
+                            <div id="mensagemRetorno" class="alert mt-4" role="alert"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="py-4 border-top">
-        <div class="container text-center">
-            <p class="mb-0">DevTest Academy 2026. Formação prática em qualidade e automação.</p>
+        <div class="container d-flex flex-column flex-md-row gap-2 justify-content-between align-items-md-center">
+            <p class="mb-0">Summit Front-End 2026. Todos os direitos reservados.</p>
+            <a href="#top" class="text-reset">Voltar ao topo</a>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <script src="./scripts.js"></script>
 </body>
 </html>

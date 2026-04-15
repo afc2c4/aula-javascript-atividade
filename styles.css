@@ -1,82 +1,174 @@
 :root {
-    --bg-main: #f7f1e8;
-    --bg-card: #fffaf2;
-    --text-main: #1f1f1f;
-    --text-soft: #5f5a54;
-    --accent: #d47b2a;
-    --accent-dark: #9d4d11;
+    --bg-page: #f3f7ff;
+    --bg-soft: #e7efff;
+    --text-main: #111827;
+    --text-soft: #4b5563;
+    --brand: #0b5ed7
+    --brand-dark: #084298;
+    --warning: #ffca2c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: "Trebuchet MS", sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f8fbff 0%, #ecf4ff 100%);
     color: var(--text-main);
-    background: linear-gradient(180deg, #fffdf8 0%, #f7f1e8 100%);
+    line-height: 1.5;
+}
+
+.site-header {
+    backdrop-filter: blur(8px);
+    z-index: 1030;
+}
+
+.navbar-brand {
+    letter-spacing: 0.02em;
 }
 
 .hero-section {
-    padding: 80 0;
+    padding: 84px 0;
     background:
-        radial-gradient(circle at top right, rgba(212, 123, 42, 0.18), transparent 25%),
-        linear-gradient(135deg, #fff7ea 0%, #f5eee2 100%);
+        radial-gradient(circle at top left, rgba(11, 94, 215, 0.25), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(255, 202, 44, 0.2), transparent 28%),
+        linear-gradient(180deg, #f7faff 0%, #eef4ff 100%);
 }
 
 .hero-card,
-.feature-card,
-.module-card,
-.audience-box,
-.testimonial-card,
-.enrollment-box {
-    background-color: var(--bg-card);
-    border-radius: 24px;
-    border: 1px solid rgba(31, 31, 31, 0.08);
-    box-shadown: 0 18px 60px rgba(31, 31, 31, 0.08);
+.session-card,
+.speaker-card,
+.ticket-card,
+.contact-box {
+    background: #ffffff;
+    border: 1px solid rgba(17, 24, 39, 0.08);
+    border-radius: 18px;
+    box-shadow: 0 16px 40px rgba(17, 24, 39, 0.08);
 }
 
-.hero-actions {
-    display: felx;
-    gap: 16px;
-    flex-wrap: wrap;
-}
-
-.section-eyebrow {
-    display: inline-block;
-    font-size: 0.85rem;
+.section-kicker {
     text-transform: uppercase;
-    letter-spacing: 0.16em;
-    color: var(--accent-dark);
-    margin-bottom: 1rem;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+    font-size: 0.78rem;
+    color: var(--brand-dark);
+    margin-bottom: 0.7rem;
 }
 
-.feature-card h3,
-.module-card h3 {
-    margin-bottom: 0.75rem;
+.section-muted {
+    background-color: var(--bg-soft);
+}
+
+.section-header {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.session-card p,
+.speaker-card p {
+    color: var(--text-soft);
+    margin-bottom: 1.1rem;
+}
+
+.speaker-card img {
+    width: 100%;
+    height: 200;
+    object-fit: cover;
 }
 
 .section-accent {
-    background-color: #221d1a;
-    color: #f9f4ec;
+    background: #0f172a;
 }
 
-.section-accent .section-eyebrow {
-    color: #f6b16f;
+.ticket-card {
+    color: #f8fafc;
+    background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
 }
 
-.audience-box {
-    background: rgba(255, 255, 255, 0.08);
+.ticket-card.highlight {
+    transform: scale(1.03);
+    border: 1px solid #facc15;
 }
 
-.testimonial-card p {
-    font-size: 1.05rem;
-    color: var(--text-soft);
+.ticket-price {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
 }
 
-#mensagem {
+.ticket-card ul {
+    padding-left: 1.2rem;
+    min-height: 100px;
+}
+
+.accordion-button {
     font-weigth: 700;
-    color: var(--accent-dark);
 }
 
-@media (max-width: 768px) {
+.contact-box {
+    background: #fff;
+}
+
+#mensagemRetorno {
+    display: none;
+    font-size: 16;
+}
+
+#mensagemRetorno.sucesso {
+    display: block;
+    background-color: #d1e7dd;
+    color: #0f5132;
+    border: 1px solid #badbcc;
+}
+
+#mensagemRetorno.erro {
+    display: block;
+    background-color: #f8d7da;
+    color: #842029;
+    border: 1px solid #f5c2c7;
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 992) {
     .hero-section {
-        padding: 48px 0;
+        padding: 52px 0;
+    }
+
+    .ticket-card.highlight {
+        transform: scale(1.08)
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section .display-4 {
+        font-size: 2.1rem;
+    }
+
+    .section-kicker {
+        letter-spacing: 0.09em;
+    }
+
+    .navbar-nav {
+        gap: 0.35rem;
+    }
+
+    .contact-box {
+        border-radius: 14px
     }
 }
