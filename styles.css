@@ -110,7 +110,7 @@ body {
 }
 
 .accordion-button {
-    font-weigth: 700;
+    font-weight: 700;
 }
 
 .contact-box {
@@ -145,7 +145,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-@media (max-width: 992) {
+@media (max-width: 992px) {
     .hero-section {
         padding: 52px 0;
     }
