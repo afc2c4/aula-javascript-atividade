@@ -114,6 +114,7 @@ function bindFormSubmit() {
             carreira: carreiraInput.value,
             ingresso: ingressoInput.value,
             sessoes: selectedSessions,
+            plano: selectedPlan,
             createdAt: new Date().toISOString
         };
 
