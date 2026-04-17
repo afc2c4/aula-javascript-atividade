@@ -13,7 +13,7 @@ function initPage() {
 function bindScheduleButtons() {
     const sessionButtons = document.querySelectorAll("[data-track='agenda']");
     sessionButtons.forEach((button) => {
-        button.addEventListner("click", () => {
+        button.addEventListener("click", () => {
             const sessionId = button.dataset.sessionId;
 
             if (selectedSessions.includes(sessionId)) {
@@ -50,7 +50,7 @@ function bindFormSubmit() {
         const ingressoInput = document.querySelector("#ingresso");
         const termsInput = document.querySelector("#termos");
 
-        if (nomeInput.value.trim().length < 3 {
+        if (nomeInput.value.trim().length < 3) {
             showMessage("erro", "Nome precisa ter no mínimo 3 caracteres.");
             return;
         }
