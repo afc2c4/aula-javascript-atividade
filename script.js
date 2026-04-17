@@ -1,6 +1,6 @@
 const formElement = document.querySelector("#formulario-inscricao");
 const btnEnviar = document.querySelector("#btn-enviar");
-const messageBox = document.querySelector("#mensagem");
+const messageBox = document.querySelector("#mensagemRetorno");
 
 const selectedSessions = [];
 
@@ -44,9 +44,9 @@ function bindFormSubmit() {
     btnEnviar.addEventListener("click", function (event) {
         event.preventDefault;
 
-        const nomeInput = document.querySelector("#nomeCompleto");
+        const nomeInput = document.querySelector("#nome-completo");
         const emailInput = document.querySelector("#email");
-        const carreiraInput = document.querySelector("#momento");
+        const carreiraInput = document.querySelector("#momento-carreira");
         const ingressoInput = document.querySelector("#ingresso");
         const termsInput = document.querySelector("#termos");
 
@@ -55,7 +55,7 @@ function bindFormSubmit() {
             return;
         }
 
-        if (emailInput.value.indexOf("@") = -1) {
+        if (emailInput.value.indexOf("@") == -1) {
             showMessage("erro", "Email inválido.");
             return;
         }
