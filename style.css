@@ -3,7 +3,7 @@
     --bg-soft: #e7efff;
     --text-main: #111827;
     --text-soft: #4b5563;
-    --brand: #0b5ed7
+    --brand: #0b5ed7;
     --brand-dark: #084298;
     --warning: #ffca2c;
 }
@@ -80,7 +80,7 @@ body {
 
 .speaker-card img {
     width: 100%;
-    height: 200;
+    height: 200px;
     object-fit: cover;
 }
 
@@ -110,7 +110,7 @@ body {
 }
 
 .accordion-button {
-    font-weigth: 700;
+    font-weight: 700;
 }
 
 .contact-box {
@@ -119,7 +119,7 @@ body {
 
 #mensagemRetorno {
     display: none;
-    font-size: 16;
+    font-size: 16px;
 }
 
 #mensagemRetorno.sucesso {
@@ -145,7 +145,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-@media (max-width: 992) {
+@media (max-width: 992px) {
     .hero-section {
         padding: 52px 0;
     }
