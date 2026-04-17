@@ -3,9 +3,11 @@ const btnEnviar = document.querySelector("#btn-enviar");
 const messageBox = document.querySelector("#mensagemRetorno");
 
 const selectedSessions = [];
+let selectedPlan = 1;
 
 function initPage() {
     bindScheduleButtons();
+    bindSelectedPlan();
     bindFormSubmit();
     loadCounter();
 }
@@ -26,6 +28,42 @@ function bindScheduleButtons() {
             button.classList.add("btn-dark");
 
             localStorage.setItem("saved-sessions", JSON.stringify(selectedSessions));
+        });
+    });
+}
+
+function bindSelectedPlan() {
+    localStorage.setItem("plan", JSON.stringify(selectedPlan));
+    const planButtons = document.querySelectorAll("[data-track='plano']");
+    planButtons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+            if(event.currentTarget.classList.contains('btn-warning')){
+                return;
+            } else {
+
+                let planButtons = document.querySelectorAll("[data-track='plano']");
+                planButtons.forEach((button) => {
+                    if(button.classList.contains('btn-warning')){
+                        button.classList.remove('btn-warning');
+                        button.classList.add('btn-outline-light');
+                        button.parentElement.classList.remove('highlight');
+                    }
+                });
+                
+                event.currentTarget.classList.remove('btn-outline-light');
+                event.currentTarget.classList.add('btn-warning');
+
+                event.currentTarget.parentElement.classList.add('highlight');
+
+                if(event.currentTarget.parentElement.children[0].innerText == 'Pro'){
+                    selectedPlan = 1;
+                } else{
+                    selectedPlan = 0;
+                }
+
+                localStorage.setItem("plan", JSON.stringify(selectedPlan));
+                
+            }
         });
     });
 }
