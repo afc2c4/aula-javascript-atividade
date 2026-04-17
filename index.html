@@ -12,7 +12,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand fw-bold" href="#topo">Summit Front-End</a>
-                <button class="navbar-toggler" type="button" data-bs-togle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false">
+                <button class="navbar-toggler" type="button" data-bs-togle="collapse" data-bs-target="#menu-principal" aria-controls="menu-principal" aria-expanded="false">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -105,7 +105,7 @@
                         <div class="row g-3">
                             <div class="col-sm-6">
                                 <div class="speaker-card p-3 h-100">
-                                    <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=800&q=60" class="img-fluid rounded mb-3">
+                                    <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=800&q=60" class="img-fluid rounded mb-3" alt="Foto de Camila Torres">
                                     <h3 class="h5 mb-1">Camila Torres</h3>
                                     <p class="small text-muted mb-0">Staff Engineer - Nubank</p>
                                 </div>
@@ -126,7 +126,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="speaker-card p-3 h-100">
-                                    <img src="https://images.unsplash.com/photo-1573603867003-89f5fd7a7576?auto=format&fit=crop&w=800&q=60" class="img-fluid rounded mb-3" alt="Foto de Diego Martins">
+                                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=60" class="img-fluid rounded mb-3" alt="Foto de Diego Martins">
                                     <h3 class="h5 mb-1">Diego Martins</h3>
                                     <p class="small text-muted mb-0">Principal Engineer - VTEX</p>
                                 </div>
@@ -154,11 +154,11 @@
                                 <li>Comunidade no Discord</li>
                                 <li>Certificado digital</li>
                             </ul>
-                            <a class="btn btn-outline-light w-100" data-track="plano">Selecionar plano</a>
+                            <a class="btn btn-outline-light w-100" data-track="plano">Quero este plano!</a>
                         </article>
                     </div>
                     <div class="col-lg-4 col-md-6">
-                        <article class="ticket-card p-4 h-100 highlight">
+                        <article class="ticket-card p-4 h-100">
                             <h3 class="h4">Pro</h3>
                             <p class="ticket-price">R$ 349</p>
                             <ul>
@@ -166,7 +166,7 @@
                                 <li>2 workshops práticos</li>
                                 <li>Mentoria em grupo</li>
                             </ul>
-                            <a class="btn btn-warning w-100" data-track="plano">Selecionar plano</a>
+                            <a class="btn btn-outline-light w-100" data-track="plano">Quero este plano!</a>
                         </article>
                     </div>
                 </div>
@@ -228,25 +228,16 @@
 
                                 <div class="col-md-6">
                                     <label for="email" class="form-label">Email</label>
-                                    <input id="email" class="form-control" type="mail" placeholder="voce@empresa.com">
+                                    <input id="email" class="form-control" type="email" placeholder="voce@empresa.com">
                                 </div>
 
                                 <div class="col-md-6">
-                                    <label for="cargo" class="form-label">Seu momento de carreira</label>
+                                    <label for="momento-carreira" class="form-label">Seu momento de carreira</label>
                                     <select id="momento-carreira" class="form-select">
                                         <option value="" selected>Selecione</option>
                                         <option value="junior">Júnior</option>
                                         <option value="pleno">Pleno</option>
                                         <option value="senior">Sênior</option>
-                                    </select>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <label class="form-label" for="ingresso">Tipo de ingresso</label>
-                                    <select id="ingresso" class="form-select">
-                                        <option value="" selected>Escolha o ingresso</option>
-                                        <option value="starter">Starter</option>
-                                        <option value="pro">Pro</option>
                                     </select>
                                 </div>
 

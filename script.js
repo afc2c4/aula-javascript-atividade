@@ -3,7 +3,7 @@ const btnEnviar = document.querySelector("#btn-enviar");
 const messageBox = document.querySelector("#mensagemRetorno");
 
 const selectedSessions = [];
-let selectedPlan = 1;
+let selectedPlan = -1;
 
 function initPage() {
     bindScheduleButtons();
@@ -47,9 +47,10 @@ function bindSelectedPlan() {
                         button.classList.remove('btn-warning');
                         button.classList.add('btn-outline-light');
                         button.parentElement.classList.remove('highlight');
+                        button.innerText = 'Quero este plano!';
                     }
                 });
-                
+                event.currentTarget.innerText = "Plano selecionado!";
                 event.currentTarget.classList.remove('btn-outline-light');
                 event.currentTarget.classList.add('btn-warning');
 
@@ -85,7 +86,6 @@ function bindFormSubmit() {
         const nomeInput = document.querySelector("#nome-completo");
         const emailInput = document.querySelector("#email");
         const carreiraInput = document.querySelector("#momento-carreira");
-        const ingressoInput = document.querySelector("#ingresso");
         const termsInput = document.querySelector("#termos");
 
         if (nomeInput.value.trim().length < 3) {
@@ -98,8 +98,13 @@ function bindFormSubmit() {
             return;
         }
 
-        if (carreiraInput.value === "" || ingressoInput.value === "") {
-            showMessage("erro", "Selecione carreira e ingresso.");
+        if (carreiraInput.value === "") {
+            showMessage("erro", "Selecione carreira.");
+            return;
+        }
+
+        if (selectedPlan == -1) {
+            showMessage("erro", "Selecione seu plano de ingresso.");
             return;
         }
 
@@ -112,7 +117,6 @@ function bindFormSubmit() {
             nome: nomeInput.value,
             email: emailInput.value,
             carreira: carreiraInput.value,
-            ingresso: ingressoInput.value,
             sessoes: selectedSessions,
             plano: selectedPlan,
             createdAt: new Date().toISOString
