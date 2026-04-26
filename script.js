@@ -1,19 +1,18 @@
-const formElement = document.querySelector("#formulario-inscricao");
+const formElement = document.querySelector("#form-inscricao");
 const btnEnviar = document.querySelector("#btn-enviar");
-const messageBox = document.querySelector("#mensagem");
+const messageBox = document.querySelector("#mensagemRetorno");
 
 const selectedSessions = [];
 
 function initPage() {
     bindScheduleButtons();
     bindFormSubmit();
-    loadCounter();
 }
 
 function bindScheduleButtons() {
     const sessionButtons = document.querySelectorAll("[data-track='agenda']");
     sessionButtons.forEach((button) => {
-        button.addEventListner("click", () => {
+        button.addEventListener("click", () => { // Corrigido addEventListener
             const sessionId = button.dataset.sessionId;
 
             if (selectedSessions.includes(sessionId)) {
@@ -30,32 +29,23 @@ function bindScheduleButtons() {
     });
 }
 
-function loadCounter() {
-    const raw = localStorage.getItem("saved-session");
-    const parsed = JSON.parse(raw || "[]");
-    const amount = document.querySelector("#saved-count");
-
-    if (amount) {
-        amount.textContent = parsed.length;
-    }
-}
-
 function bindFormSubmit() {
     btnEnviar.addEventListener("click", function (event) {
-        event.preventDefault;
+        event.preventDefault(); // Corrigido ()
 
-        const nomeInput = document.querySelector("#nomeCompleto");
+        const nomeInput = document.querySelector("#nome");
         const emailInput = document.querySelector("#email");
-        const carreiraInput = document.querySelector("#momento");
+        const carreiraInput = document.querySelector("#momento-carreira");
         const ingressoInput = document.querySelector("#ingresso");
-        const termsInput = document.querySelector("#termos");
+        const termsInput = document.querySelector("#terms");
 
-        if (nomeInput.value.trim().length < 3 {
+        // Validações
+        if (nomeInput.value.trim().length < 3) { // Corrigido parênteses
             showMessage("erro", "Nome precisa ter no mínimo 3 caracteres.");
             return;
         }
 
-        if (emailInput.value.indexOf("@") = -1) {
+        if (emailInput.value.indexOf("@") === -1) {
             showMessage("erro", "Email inválido.");
             return;
         }
@@ -65,7 +55,7 @@ function bindFormSubmit() {
             return;
         }
 
-        if (termsInput.checked === false) {
+        if (!termsInput.checked) {
             showMessage("erro", "Aceite os termos para prosseguir.");
             return;
         }
@@ -76,10 +66,11 @@ function bindFormSubmit() {
             carreira: carreiraInput.value,
             ingresso: ingressoInput.value,
             sessoes: selectedSessions,
-            createdAt: new Date().toISOString
+            createdAt: new Date().toISOString()
         };
 
-        localStorage.setItem("last-signup", payload);
+        // Salva como String no LocalStorage
+        localStorage.setItem("last-signup", JSON.stringify(payload));
 
         showMessage("sucesso", `Inscrição de ${payload.nome} enviada com sucesso!`);
         formElement.reset();
